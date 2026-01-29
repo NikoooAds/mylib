@@ -2,8 +2,12 @@ package mylib
 
 import "fmt"
 
-func Hello(name string) string {
-	return fmt.Sprintf("Hello, %s!", name)
+func Hello(name string, times int) string {
+	result := ""
+	for i := 0; i < times; i++ {
+		result += fmt.Sprintf("Hello, %s! ", name)
+	}
+	return result
 }
 
 func Add(a, b int) int {
